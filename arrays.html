@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memorama</title>
+    <link rel="stylesheet" href="css/estilos1.css">
+   
+</head>
+<body>
+   
+
+    <h1>Bienvenido al juego</h1>
+    <header class="cabecera">    
+    <div class="contadores">
+        <!--contador de movimientos-->
+        <div class="contadorItem">
+            <h4 class="cabeceraTitulo">
+                Movimientos</h4>
+         <div class="cabeceraNum">
+             <span id="mov">00</span>/<span id="movTotales">20</span>
+         </div>
+        </div>
+        <!--contador de tiempo-->
+        <div class="contadorItem">
+            <h4 class="cabeceraTitulo">
+                Tiempo</h4>
+         <div class="cabeceraNum">
+             <span id="minutos">00</span>:<span id="segundos">00</span>
+         </div>
+         </div>
+         <div class="contadorItem">
+            <h4 class="cabeceraTitulo">
+                Nivel</h4>
+         <div class="cabeceraNum">
+             <span id="nivel">01</span>
+         </div>
+        </div>
+
+    </div>
+    </header>
+    <main>
+            <!--====SUBIR DE NIVEL===-->
+    <div id="subeNivel" class="sube-nivel">
+        <div class="modal">
+          <h2>¡MUY BIEN!</h2>
+         
+          <button id="subir" class="botonFeed" >
+            Siguiente Nivel  
+            </button>
+
+         <button class="reiniciar">
+          ¿Reiniciar?  
+          </button>
+          
+        </div>
+    </div> 
+            <!--====GAME OVER===-->
+            <div id="gameOver" class="game-over">
+                <div class="modal">
+                  <h2>¡Oh NO!</h2>
+                 <p>Te has quedado sin movimientos muchach@</p>
+                 <button id="reiniciar" class="botonFeed" >
+                  ¿Reiniciar?  
+                  </button>
+                  
+                </div>
+            </div> 
+         <!--====PANTALLA PARA REINICIAR EL JUEGO===-->
+    <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>¡ENHORABUENA!</h2>
+         <p>Has superado todos los niveles !</p>
+         <button id="reiniciar" class="reiniciar" type="">
+          ¿Reiniciar?  
+          </button>
+          
+        </div>
+    </div> 
+        <div id="mesa" class="mesa">
+        </div>
+    </main>
+    <button value="Cuenta regresiva" onclick="cronometroReversa();">Cuenta Regresiva</button>
+    <!-- <button id="mostrarFeed" value="pantallaFeed">Mostrar pantalla</button>
+     -->
+<!-- <script type="text/javascript">
+var botonFeed = document.querySelector("#mostrarFeed");
+  function muestraFeed(){
+    var resetFeed = document.querySelector("#feedback");
+    resetFeed.style.visibility="visible"; 
+   }
+   botonFeed.addEventListener("click",muestraFeed);
+</script> -->
+
+    <!--<script src="js/arrays.js"></script>-->
+<script src="js/variablesGlobales.js"></script><!--DECLARA LAS VARIABLES-->
+<script src="js/barajaReparte.js"></script><!--Revuelve las cartas-->
+<script src="js/descubrirComparar.js"></script><!--VOLTEA LAS TARJETAS Y LCOMPARA LOS VALORES, ACTIVA LAS FUNCIONES DE ACIERTO Y ERROR-->
+<script src="js/aciertoError.js"></script><!--FUNCIONES QUE LANZAN FEEDBACK DE ACIERTO Y ERROR SEGUN LAS COMPARACIONES RECIBIDAS -->
+    <!-- <script src="js/arrayV2.js"></script>-->
+<script src="js/cronometro.js"></script>
+<script src="js/contador.js"></script>
+<script src="js/finalizar.js"></script>
+<script src="js/cambiaNivel.js"></script>
+<script src="js/iniciar.js"></script><!--INICIALIZA TODAS LAS FUNCIONES-->
+
+</body>
+</html>
