@@ -32,7 +32,7 @@ function iniciaCronometro(){
 }
 
 function cronometroReversa(){
-  var segundos = 59;
+  var segundos = niveles[nivelActual].tiempoMax;
   var minutos = 0;
   var segundosTexto;
   var minutosTexto;

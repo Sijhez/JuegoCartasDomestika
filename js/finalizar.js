@@ -7,9 +7,5 @@ function finalizar(){
 
   }
     
-      
-   
-    
-    // document.querySelector("#gameOver").style.visibility="visible";
-    
 }
+

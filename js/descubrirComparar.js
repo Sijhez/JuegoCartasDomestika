@@ -8,7 +8,7 @@ function voltear(){
     }  
     
     this.classList.add("descubierta");
-   
+    document.querySelector("#sonidoCarta").cloneNode().play();   
     volteadas = document.querySelectorAll(".descubierta:not(.Acertada)"); //creamos esta variable para identificar cuantas tarjetas se "voltean"
     if(volteadas.length < 2){
       return;//aquí la funcion se detiene o retorna al comprobar que existen dos elementos con clase descubierta que serán comparados

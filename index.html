@@ -50,7 +50,7 @@
             Siguiente Nivel  
             </button>
 
-         <button class="reiniciar">
+         <button class="reiniciar botonFeed">
           ¿Reiniciar?  
           </button>
           
@@ -61,12 +61,25 @@
                 <div class="modal">
                   <h2>¡Oh NO!</h2>
                  <p>Te has quedado sin movimientos muchach@</p>
-                 <button id="reiniciar" class="botonFeed" >
+                 <button class="reiniciar botonFeed" >
                   ¿Reiniciar?  
                   </button>
                   
                 </div>
             </div> 
+
+            <!--====TIME OVER===-->
+            <div id="timeOver" class="game-over">
+                <div class="modal">
+                  <h2>¡Oh NO!</h2>
+                 <p>Se terminó el tiempo muchach@</p>
+                 <button class="reiniciar botonFeed" >
+                  ¿Reiniciar?  
+                  </button>
+                  
+                </div>
+            </div> 
+
          <!--====PANTALLA PARA REINICIAR EL JUEGO===-->
     <div id="endGame" class="end-game">
         <div class="modal">
@@ -82,6 +95,31 @@
         </div>
     </main>
     <button value="Cuenta regresiva" onclick="cronometroReversa();">Cuenta Regresiva</button>
+<!--efectos de sonido-->
+<audio src="media/acierto.mp3"
+class="sonido"
+id="sonidoAcierto"
+preload="auto"
+
+>
+</audio> 
+<audio src="media/carta.mp3"
+class="sonido"
+id="sonidoCarta"
+preload="auto"
+
+>
+</audio> 
+<audio src="media/error.mp3"
+class="sonido"
+id="sonidoError"
+preload="auto"
+ 
+>
+</audio> 
+ 
+
+
     <!-- <button id="mostrarFeed" value="pantallaFeed">Mostrar pantalla</button>
      -->
 <!-- <script type="text/javascript">
@@ -101,6 +139,7 @@ var botonFeed = document.querySelector("#mostrarFeed");
     <!-- <script src="js/arrayV2.js"></script>-->
 <script src="js/cronometro.js"></script>
 <script src="js/contador.js"></script>
+<script src="js/game-over.js"></script>
 <script src="js/finalizar.js"></script>
 <script src="js/cambiaNivel.js"></script>
 <script src="js/iniciar.js"></script><!--INICIALIZA TODAS LAS FUNCIONES-->

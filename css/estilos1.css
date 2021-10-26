@@ -252,12 +252,16 @@ border:2px solid #f18f27;
 background: linear-gradient(180deg, rgb(21, 18, 73) 53%, rgb(6, 53, 127) 100%);
 }
 
-.reiniciar{
+.botonFeed{
   background-color: darkorange;
   color:midnightblue;
   border:none;
   padding:10px 15px;
   font-size:1.3em;
   border-radius: 10px;
-  
+  cursor:pointer;
+}
+
+.sonido{
+  display: none;
 }

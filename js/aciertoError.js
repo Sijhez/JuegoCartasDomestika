@@ -3,6 +3,7 @@
   function acierto(lasTarjetas){
     lasTarjetas.forEach(function(elemento){
       elemento.classList.add("Acertada");
+      document.querySelector("#sonidoAcierto").play();
     });
       }    
 
@@ -10,6 +11,7 @@
       //añadimos la animacion por medio de la clase error
     lasTarjetas.forEach(function(elemento){
         elemento.classList.add("error");
+        document.querySelector("#sonidoError").play();
     });
 
     //funcion para retrasar una funcion, controla tiempo
