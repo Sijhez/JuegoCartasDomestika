@@ -2,16 +2,17 @@
      
   function acierto(lasTarjetas){
     lasTarjetas.forEach(function(elemento){
-      elemento.classList.add("Acertada");
-      document.querySelector("#sonidoAcierto").play();
+      elemento.classList.add("Acertada");    //clona el nodo del sonido
+      document.querySelector("#sonidoAcierto").cloneNode().play();
     });
       }    
 
   function error(lasTarjetas){
       //añadimos la animacion por medio de la clase error
     lasTarjetas.forEach(function(elemento){
+
         elemento.classList.add("error");
-        document.querySelector("#sonidoError").play();
+        document.querySelector("#sonidoError").cloneNode().play();
     });
 
     //funcion para retrasar una funcion, controla tiempo
@@ -21,7 +22,7 @@
                 elemento.classList.remove("descubierta");
                 elemento.classList.remove("error");
               });
-        }, 1000);//tiempo que tardará en ejecutarse la funcion, en milisegundos
+        }, 1500);//tiempo que tardará en ejecutarse la funcion, en milisegundos
     }      
 
     

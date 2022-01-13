@@ -49,7 +49,7 @@ function cronometroReversa(){
       segundos = 0;
       minutos = 0;
       clearInterval(cronometrobb);//detiene la cuenta regresiva despues del cero
-      window.alert("Se acabó el tiempo");
+      timeOver();
     }
     segundosTexto = segundos;
     minutosTexto = minutos;

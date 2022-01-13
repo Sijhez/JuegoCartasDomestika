@@ -9,9 +9,28 @@
    
 </head>
 <body>
-   
+<!-- PANTALLA DE INICIO DEL JUEGO -->
+    <div class="bienvenido" id="bienvenido">
+        <h1>¡Bienvenido al memorama!</h1>
+        <hr>
+        <h2>Escoge la modalidad del juego</h2>
 
-    <h1>Bienvenido al juego del memorama</h1>
+        <div>
+            <button id="normal" class="botonFeed" >
+                Juego a contrarreloj  
+                </button>
+    
+                <button id="relax" class="botonFeed" >
+                   Modo Relax 
+                    </button>
+        </div>
+       
+
+    </div>
+    
+    
+    <h1>¡A jugar!</h1>
+
     <header class="cabecera">    
     <div class="contadores">
         <!--contador de movimientos-->
@@ -23,18 +42,27 @@
          </div>
         </div>
         <!--contador de tiempo-->
-        <div class="contadorItem">
+        <div class="contadorItem" id="cronometro">
             <h4 class="cabeceraTitulo">
                 Tiempo</h4>
          <div class="cabeceraNum">
              <span id="minutos">00</span>:<span id="segundos">00</span>
          </div>
          </div>
+
          <div class="contadorItem">
             <h4 class="cabeceraTitulo">
                 Nivel</h4>
          <div class="cabeceraNum">
              <span id="nivel">01</span>
+         </div>
+        </div>
+
+        <div class="contadorItem">
+            
+         <div class="cabeceraNum" style="margin-top: 5px;">
+             <span id="controlNivel" 
+             style="font-size: .5em; cursor: pointer; border: 1px solid darkorange; border-radius: 10px; padding: 10px;">Niveles</span>
          </div>
         </div>
 
@@ -94,8 +122,21 @@
         <div id="mesa" class="mesa">
         </div>
     </main>
-    <button value="Cuenta regresiva" onclick="cronometroReversa();">Cuenta Regresiva</button>
-<!--efectos de sonido-->
+    <!-- <button value="Cuenta regresiva" onclick="cronometroReversa();">Cuenta Regresiva</button> -->
+
+    <!-- MENU DE NIVELES -->
+    <div class="nav">
+        <span onClick="mostrarNiveles()">X</span>
+        <ul>
+           <li><a href="#">Nivel 1</a></li>
+           <li><a href="#">Nivel 2</a></li>
+           <li><a href="#">Nivel 3</a></li>
+           <li><a href="#">Nivel 4</a></li>
+        </ul>
+      </div>
+
+
+    <!--efectos de sonido-->
 <audio src="media/acierto.mp3"
 class="sonido"
 id="sonidoAcierto"
@@ -120,16 +161,7 @@ preload="auto"
  
 
 
-    <!-- <button id="mostrarFeed" value="pantallaFeed">Mostrar pantalla</button>
-     -->
-<!-- <script type="text/javascript">
-var botonFeed = document.querySelector("#mostrarFeed");
-  function muestraFeed(){
-    var resetFeed = document.querySelector("#feedback");
-    resetFeed.style.visibility="visible"; 
-   }
-   botonFeed.addEventListener("click",muestraFeed);
-</script> -->
+  
 
     <!--<script src="js/arrays.js"></script>-->
 <script src="js/variablesGlobales.js"></script><!--DECLARA LAS VARIABLES-->
@@ -143,6 +175,7 @@ var botonFeed = document.querySelector("#mostrarFeed");
 <script src="js/finalizar.js"></script>
 <script src="js/cambiaNivel.js"></script>
 <script src="js/iniciar.js"></script><!--INICIALIZA TODAS LAS FUNCIONES-->
-
+<script src="js/iniciar.js"></script>
+<script src="js/comienzaJuego.js"></script>
 </body>
 </html>

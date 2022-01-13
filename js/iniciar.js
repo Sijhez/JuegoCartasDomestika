@@ -10,6 +10,7 @@ function iniciar() {
   maxContador();
   document.querySelector("#endGame").style.visibility = "hidden";
   document.querySelector("#gameOver").style.visibility = "hidden";
+  document.querySelector("#timeOver").style.visibility = "hidden";
   document.querySelector("#subeNivel").style.visibility = "hidden";
 
   document.querySelectorAll(".tarjeta").forEach(function (tarjetita) {
@@ -17,8 +18,16 @@ function iniciar() {
     tarjetita.addEventListener("click", voltear); //agrega evento click y función voltear
   });
 
+  if (!modoRelax) {
+    cronometroReversa()
+  } else {
+    document.querySelector('#cronometro').style.visibility = "hidden";
+  }
+
   //iniciaCronometro();
 }
+
+
 
 function reiniciar() {
   nivelActual = 0;
@@ -26,10 +35,28 @@ function reiniciar() {
   iniciar();
 }
 
-iniciar();
-document.querySelectorAll(".reiniciar").forEach(function (elemento) {
-  elemento.addEventListener("click", reiniciar);
-});
+function iniciaJuegoNormal(){
+  modoRelax = false;
+  document.querySelector('#bienvenido').style.visibility = "hidden";
+  iniciar();
+  //oculta control de cambio de niveles
+  document.querySelector("#controlNivel").style.visibility = "hidden"
+  
+}
+
+function iniciaModoRelax(){
+  modoRelax = true;
+  document.querySelector('#bienvenido').style.visibility = "hidden";
+  iniciar();
+}
+
+function mostrarNiveles(){
+  const navigator = document.querySelector(".nav")
+   navigator.classList.toggle("openMenu")
+
+}
+
+
 
 document.querySelector("#subir").addEventListener("click", cargaNuevoNivel);
 //con el boton de subir subimos el nivel de dificultad
