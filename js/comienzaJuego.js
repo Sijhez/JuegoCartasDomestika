@@ -1,4 +1,4 @@
-//escribeNiveles();
+escribeNiveles();
 
 
 //reinicio de juego
@@ -13,4 +13,8 @@ document.querySelectorAll(".reiniciar").forEach(function (elemento) {
 //menu niveles
 document.querySelector("#controlNivel").addEventListener("click", mostrarNiveles)
 
+document.querySelectorAll(".nivel").forEach(function(elemento){
+  elemento.addEventListener('click', cambiaNivel)
+})
 
+// document.querySelector("body").addEventListener('click', clickFueraMenu)

@@ -1,3 +1,4 @@
+//CRONOMETRO HACIA ADELANTE
 function iniciaCronometro(){
   var segundos = 0;
   var minutos = 0;
@@ -30,7 +31,7 @@ function iniciaCronometro(){
 
     
 }
-
+//CRONOMETRO HACIA ATRAS
 function cronometroReversa(){
   var segundos = niveles[nivelActual].tiempoMax;
   var minutos = 0;
@@ -48,7 +49,7 @@ function cronometroReversa(){
     if (minutos < 0){
       segundos = 0;
       minutos = 0;
-      clearInterval(cronometrobb);//detiene la cuenta regresiva despues del cero
+      clearInterval(cronometro);//detiene la cuenta regresiva despues del cero
       timeOver();
     }
     segundosTexto = segundos;
@@ -67,7 +68,8 @@ function cronometroReversa(){
   }
    
 
-  cronometrobb = setInterval(actualizaContador,1000); //actualiza la funcion
-
+  cronometro = setInterval(actualizaContador,1000); //actualiza la funcion
+  
+  
     
 }

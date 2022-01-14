@@ -1,4 +1,5 @@
 function gameOver(){
+    clearInterval(cronometro)
     document.querySelector("#gameOver").style.visibility="visible";
 }
 

@@ -21,6 +21,7 @@ function voltear(){
     setTimeout(finalizar, 1000); //al detectar que la longitud de tarjetas pendientes es cero, entra la function finalizar despues de 1seg
   }
 }
+
 function comparar(tarjetasAComparar){ //conectamos esta funcion con la anterior cuando mandamos llamarla, e incluímos los parametros declarados
       //ahora vamos a comparar los valores de las cartas para emitir un mensaje
    if(tarjetasAComparar[0].dataset.value === tarjetasAComparar[1].dataset.value) {
