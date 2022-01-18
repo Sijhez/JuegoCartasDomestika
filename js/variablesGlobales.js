@@ -1,14 +1,14 @@
 var modoRelax = false;
 var cronometro;
 var movimientos = 0;
-var joe = '/media/joe.jpg'
-var clark= '/media/clark.jpg'
-var ka='/media/k.jpg'
-var king='/media/king.jpg'
-var maxima = '/media/maxima.jpg'
-var ralf = '/media/ralf.jpg'
-var ryo = '/media/ryo.jpg'
-var terry = '/media/terry.jpg'
+var joe = 'media/joe.jpg'
+var clark= 'media/clark.jpg'
+var ka='media/k.jpg'
+var king='media/king.jpg'
+var maxima = 'media/maxima.jpg'
+var ralf = 'media/ralf.jpg'
+var ryo = 'media/ryo.jpg'
+var terry = 'media/terry.jpg'
 var grupoTarjetas1 = [[joe, clark],[ka, king], [maxima, ralf], [ryo, terry]]
 //var grupoTarjetas1 =[ ["🦄", "🍦"], ["🌈", "👽"], ["👾", "🤖"], ["🙉", "💣"]]
 
