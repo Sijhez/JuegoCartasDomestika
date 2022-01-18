@@ -11,10 +11,10 @@ document.querySelectorAll(".reiniciar").forEach(function (elemento) {
   document.querySelector("#relax").addEventListener("click", iniciaModoRelax)
 
 //menu niveles
-document.querySelector("#controlNivel").addEventListener("click", mostrarNiveles)
+document.querySelector("#controlNivel").addEventListener("click", muestraMenuNiveles)
 
 document.querySelectorAll(".nivel").forEach(function(elemento){
   elemento.addEventListener('click', cambiaNivel)
 })
-
-// document.querySelector("body").addEventListener('click', clickFueraMenu)
+//agregamos un listener al body para mandar el menu de nuevo a esconder, usando la funcion clickFueraMenu
+document.querySelector("body").addEventListener('click', clickFueraMenu)

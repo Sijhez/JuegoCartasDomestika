@@ -11,8 +11,8 @@
 <body>
 <!-- PANTALLA DE INICIO DEL JUEGO -->
     <div class="bienvenido" id="bienvenido">
-        <h1>¡Bienvenido al memorama!</h1>
-        <hr>
+        <img style="width: 80%;margin:0px auto;" src="/media/portada.jpg">
+       
         <h2>Escoge la modalidad del juego</h2>
 
         <div>
@@ -27,6 +27,57 @@
        
 
     </div>
+
+            <!--====SUBIR DE NIVEL===-->
+            <div id="subeNivel" class="sube-nivel">
+                <div class="modal">
+                  <h2>¡MUY BIEN!</h2>
+                 
+                  <button id="subir" class="botonFeed" >
+                    Siguiente Nivel  
+                    </button>
+        
+                 <button class="reiniciar botonFeed">
+                  ¿Reiniciar?  
+                  </button>
+                  
+                </div>
+            </div> 
+                    <!--====GAME OVER===-->
+                    <div id="gameOver" class="game-over">
+                        <div class="modal">
+                          <h2>¡Oh NO!</h2>
+                         <p>Te has quedado sin movimientos muchach@</p>
+                         <button class="reiniciar botonFeed" >
+                          ¿Reiniciar?  
+                          </button>
+                          
+                        </div>
+                    </div> 
+        
+                    <!--====TIME OVER===-->
+                    <div id="timeOver" class="game-over">
+                        <div class="modal">
+                          <h2>¡Oh NO!</h2>
+                         <p>Se terminó el tiempo muchach@</p>
+                         <button class="reiniciar botonFeed" >
+                          ¿Reiniciar?  
+                          </button>
+                          
+                        </div>
+                    </div> 
+        
+                 <!--====PANTALLA PARA REINICIAR EL JUEGO===-->
+            <div id="endGame" class="end-game">
+                <div class="modal">
+                  <h2>¡ENHORABUENA!</h2>
+                 <p>Has superado todos los niveles !</p>
+                 <button id="reiniciar" class="reiniciar" type="">
+                  ¿Reiniciar?  
+                  </button>
+                  
+                </div>
+            </div> 
     
     
     <h1>¡A jugar!</h1>
@@ -68,57 +119,9 @@
 
     </div>
     </header>
+
     <main>
-            <!--====SUBIR DE NIVEL===-->
-    <div id="subeNivel" class="sube-nivel">
-        <div class="modal">
-          <h2>¡MUY BIEN!</h2>
-         
-          <button id="subir" class="botonFeed" >
-            Siguiente Nivel  
-            </button>
-
-         <button class="reiniciar botonFeed">
-          ¿Reiniciar?  
-          </button>
-          
-        </div>
-    </div> 
-            <!--====GAME OVER===-->
-            <div id="gameOver" class="game-over">
-                <div class="modal">
-                  <h2>¡Oh NO!</h2>
-                 <p>Te has quedado sin movimientos muchach@</p>
-                 <button class="reiniciar botonFeed" >
-                  ¿Reiniciar?  
-                  </button>
-                  
-                </div>
-            </div> 
-
-            <!--====TIME OVER===-->
-            <div id="timeOver" class="game-over">
-                <div class="modal">
-                  <h2>¡Oh NO!</h2>
-                 <p>Se terminó el tiempo muchach@</p>
-                 <button class="reiniciar botonFeed" >
-                  ¿Reiniciar?  
-                  </button>
-                  
-                </div>
-            </div> 
-
-         <!--====PANTALLA PARA REINICIAR EL JUEGO===-->
-    <div id="endGame" class="end-game">
-        <div class="modal">
-          <h2>¡ENHORABUENA!</h2>
-         <p>Has superado todos los niveles !</p>
-         <button id="reiniciar" class="reiniciar" type="">
-          ¿Reiniciar?  
-          </button>
-          
-        </div>
-    </div> 
+    
         <div id="mesa" class="mesa">
         </div>
     </main>
@@ -127,8 +130,7 @@
     <!-- MENU DE NIVELES -->
     <div class="nav">
         <span onClick="mostrarNiveles()">X</span>
-        <ul>
-          
+        <ul style="padding-left: 0px;">
         </ul>
       </div>
 

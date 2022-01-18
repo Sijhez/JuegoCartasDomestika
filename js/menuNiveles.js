@@ -16,11 +16,16 @@ function cambiaNivel(){
    iniciar();
 }
 
-// function clickFueraMenu(evento){
-//     if(evento.target.closest(".nav")){
-//         return
-//     }
-//     const navigator = document.querySelector(".nav")
-//     navigator.classList.toggle("openMenu")
-//     // document.querySelector(".nav").style.visibility="hidden"
-// }
+function muestraMenuNiveles(evento){
+    evento.stopPropagation();//evita que el click se propague fuera del elemento seleccionado
+    document.querySelector(".nav").classList.toggle("openMenu")
+}
+
+function clickFueraMenu(evento){
+    //.closest() verifica que tan cercano esta el target del evento en el que se esta haciendo click, o el evento que se recibe
+    if(evento.target.closest(".nav")){
+        return
+    }
+
+    document.querySelector(".nav").classList.remove("openMenu")
+}

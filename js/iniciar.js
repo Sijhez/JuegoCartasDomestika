@@ -50,11 +50,11 @@ function iniciaModoRelax(){
   iniciar();
 }
 
-function mostrarNiveles(){
-  const navigator = document.querySelector(".nav")
-   navigator.classList.toggle("openMenu")
+// function mostrarNiveles(){
+//   const navigator = document.querySelector(".nav")
+//    navigator.classList.toggle("openMenu")
 
-}
+// }
 
 
 

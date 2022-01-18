@@ -27,7 +27,7 @@ function reparteTarjetas(lasTarjetas){
     elemento +
     ">" +
     "<div class='tarjeta__contenido'>" +
-    elemento +
+     "<img src='"+elemento+"' >"+
     "</div>" +
     "</div>"
     ;
