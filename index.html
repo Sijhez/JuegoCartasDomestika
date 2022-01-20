@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Memorama</title>
     <link rel="stylesheet" href="css/estilos1.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
    
 </head>
 <body>
 <!-- PANTALLA DE INICIO DEL JUEGO -->
     <div class="bienvenido" id="bienvenido">
-        <img style="width: 80%;margin:0px auto;" src="media/portada.jpg">
+        <img class="welcome" style="width: 70vw;margin:0px auto;" src="media/portada.jpg">
        
         <h2>Escoge la modalidad del juego</h2>
 
@@ -27,7 +31,9 @@
        
 
     </div>
+    <div class="escene" id="background">
 
+    </div>
             <!--====SUBIR DE NIVEL===-->
             <div id="subeNivel" class="sube-nivel">
                 <div class="modal">
@@ -86,24 +92,24 @@
     <div class="contadores">
         <!--contador de movimientos-->
         <div class="contadorItem">
-            <h4 class="cabeceraTitulo">
-                Movimientos</h4>
+            <h2 class="cabeceraTitulo">
+                Movimientos</h2>
          <div class="cabeceraNum">
              <span id="mov">00</span>/<span id="movTotales">20</span>
          </div>
         </div>
         <!--contador de tiempo-->
         <div class="contadorItem" id="cronometro">
-            <h4 class="cabeceraTitulo">
-                Tiempo</h4>
+            <h2 class="cabeceraTitulo">
+                Tiempo</h2>
          <div class="cabeceraNum">
              <span id="minutos">00</span>:<span id="segundos">00</span>
          </div>
          </div>
 
          <div class="contadorItem">
-            <h4 class="cabeceraTitulo">
-                Nivel</h4>
+            <h2 class="cabeceraTitulo">
+                Nivel</h2>
          <div class="cabeceraNum">
              <span id="nivel">01</span>
          </div>
@@ -129,34 +135,14 @@
 
     <!-- MENU DE NIVELES -->
     <div class="nav">
-        <span onClick="mostrarNiveles()">X</span>
+        <span onClick="ocultaMenu()">X</span>
         <ul style="padding-left: 0px;">
         </ul>
       </div>
 
 
     <!--efectos de sonido-->
-<audio src="media/acierto.mp3"
-class="sonido"
-id="sonidoAcierto"
-preload="auto"
 
->
-</audio> 
-<audio src="media/carta.mp3"
-class="sonido"
-id="sonidoCarta"
-preload="auto"
-
->
-</audio> 
-<audio src="media/error.mp3"
-class="sonido"
-id="sonidoError"
-preload="auto"
- 
->
-</audio> 
  
 
 

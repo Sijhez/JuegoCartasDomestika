@@ -3,7 +3,8 @@
   function acierto(lasTarjetas){
     lasTarjetas.forEach(function(elemento){
       elemento.classList.add("Acertada");    //clona el nodo del sonido
-      document.querySelector("#sonidoAcierto").cloneNode().play();
+      
+      aciertoSound.cloneNode().play();
     });
       }    
 
@@ -12,7 +13,7 @@
     lasTarjetas.forEach(function(elemento){
 
         elemento.classList.add("error");
-        document.querySelector("#sonidoError").cloneNode().play();
+        errorSound.cloneNode().play()
     });
 
     //funcion para retrasar una funcion, controla tiempo

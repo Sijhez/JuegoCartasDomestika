@@ -11,7 +11,6 @@
 
 body {
   margin: auto;
-  min-height: 100vh;
   background: var(--bg);
   color: #fff;
   text-align: center;
@@ -26,6 +25,21 @@ body {
   padding: 5px;
   margin: 10px auto;
   background: #000;
+}
+h2{
+  margin:0px auto;
+}
+.escene{
+  height: 100%;
+  width: 100%;
+  opacity: .4;
+  z-index: -1;
+    position: absolute;
+  background-size: cover;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .container > h2 {
@@ -107,8 +121,8 @@ main {
   height: 150px;
   margin: 0.5rem;
   border-radius: 0.3em;
-  background-image: var(--gradient);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  background-image: url('../media/backCard.jpg');
+  box-shadow: 0px 0px 7px 3px #f06f00fa;
   position: relative;
   transition: 0.3s;
   cursor: pointer;
@@ -215,6 +229,7 @@ header{
 .contadorItem{
   text-align: center;
   margin: 0px 0.5em;
+  display:flex;
 }
 h4.cabeceraTitulo{
   margin: 0px !important;
@@ -239,7 +254,7 @@ color: #f18f27;
 padding: 30px;
 border-radius: 15px;
 border:2px solid #f18f27;
-background: linear-gradient(180deg, rgb(21, 18, 73) 53%, rgb(6, 53, 127) 100%);
+background: linear-gradient(5deg, rgb(73 18 46) 32%, rgb(27 5 41) 100%);
 }
 
 .botonFeed{
@@ -247,6 +262,7 @@ background: linear-gradient(180deg, rgb(21, 18, 73) 53%, rgb(6, 53, 127) 100%);
   color:midnightblue;
   border:none;
   padding:10px 15px;
+  margin: 10px;
   font-size:1.3em;
   border-radius: 10px;
   cursor:pointer;
@@ -295,11 +311,29 @@ ul>li>a{
 ul li{
     padding:10% 0;
 }
+
+@keyframes zoomInPortada {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+            opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+  }
+}
+.welcome{
+  animation-delay: 1000ms;
+   animation: zoomInPortada 0.5s ease-out both;
+}
 button.nivel{
   background: transparent;
     border: none;
-    color: #fff;
-    font-size: 1.1em;
+    color: rgb(212, 191, 0);
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .tarjeta__contenido>img{
   border-radius: 0.3em;
