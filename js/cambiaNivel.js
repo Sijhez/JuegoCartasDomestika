@@ -1,6 +1,6 @@
 function subeNivel(){
     nivelActual++;//aumenta de nivel mas uno partiendo de nivel actual que es cero
-   
+    bling.play()
 }
 
 function actualizaNivel(){//cambia el nivel en el marcador del nivel dentro del DOM

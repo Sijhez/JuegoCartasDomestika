@@ -26,6 +26,9 @@ function comparar(tarjetasAComparar){ //conectamos esta funcion con la anterior 
       //ahora vamos a comparar los valores de las cartas para emitir un mensaje
    if(tarjetasAComparar[0].dataset.value === tarjetasAComparar[1].dataset.value) {
    acierto(tarjetasAComparar);//mandamos llamar las funciones que existen en el archivo aciertoError.js y le pasamos los parametros para que haga las comparaciones
+  //  if(tarjetasAComparar.dataset.value === 'media/ralf.jpg'){
+  //   ralfAudio.play()
+  //   }
   }else{
    error(tarjetasAComparar)
   }

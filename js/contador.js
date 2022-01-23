@@ -1,4 +1,5 @@
 function actualizaContador(){
+  
    var movimientosTexto;
    movimientos++;
    movimientosTexto = movimientos;

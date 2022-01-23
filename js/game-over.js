@@ -1,8 +1,9 @@
 function gameOver(){
     clearInterval(cronometro)
-    document.querySelector("#gameOver").style.visibility="visible";
+    document.querySelector("#gameOver").classList.add('modalVisible');;
 }
 
 function timeOver(){
-    document.querySelector("#timeOver").style.visibility="visible";
+    document.querySelector("#timeOver").classList.add('modalVisible');
+    ticToc.pause()
 }

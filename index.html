@@ -7,10 +7,10 @@
     <title>Juego de Memorama</title>
     <link rel="stylesheet" href="css/estilos1.css">
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-   
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <!-- PANTALLA DE INICIO DEL JUEGO -->
@@ -34,7 +34,15 @@
     <div class="escene" id="background">
 
     </div>
-            <!--====SUBIR DE NIVEL===-->
+    
+    <div id="aJugar" >
+        <div class="modal">
+          <h2 style="font-size: 3.5em; letter-spacing: 5px;">¡A JUGAR!</h2>
+        </div>
+    </div>
+    
+    
+    <!--====SUBIR DE NIVEL===-->
             <div id="subeNivel" class="sube-nivel">
                 <div class="modal">
                   <h2>¡MUY BIEN!</h2>
@@ -76,17 +84,16 @@
                  <!--====PANTALLA PARA REINICIAR EL JUEGO===-->
             <div id="endGame" class="end-game">
                 <div class="modal">
-                  <h2>¡ENHORABUENA!</h2>
+                  <h2>¡Felicidades!</h2>
                  <p>Has superado todos los niveles !</p>
-                 <button id="reiniciar" class="reiniciar" type="">
-                  ¿Reiniciar?  
+                 <button id="inicio" class="reiniciar botonFeed" >
+                  ¿Volver al inicio?  
                   </button>
                   
                 </div>
             </div> 
     
     
-    <h1>¡A jugar!</h1>
 
     <header class="cabecera">    
     <div class="contadores">
@@ -119,7 +126,8 @@
             
          <div class="cabeceraNum" style="margin-top: 5px;">
              <span id="controlNivel" 
-             style="font-size: .5em; cursor: pointer; border: 1px solid darkorange; border-radius: 10px; padding: 10px;">Niveles</span>
+             style="font-size:.8em; cursor: pointer;">
+             Selecciona Niveles</span>
          </div>
         </div>
 
@@ -143,10 +151,11 @@
 
     <!--efectos de sonido-->
 
- 
 
 
-  
+  <div style="z-index: 1000;position: fixed;width: 100vw;bottom: 0;background: #1f1f1fba;font-size: .8em;">
+      <p style="color: white;">Developed by Sijhez</p>
+  </div>
 
     <!--<script src="js/arrays.js"></script>-->
 <script src="js/variablesGlobales.js"></script><!--DECLARA LAS VARIABLES-->

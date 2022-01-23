@@ -1,10 +1,50 @@
+music.volume = 0.3
+errorSound.volume = 0.1
+cartaSound.volume = 0.2 
+aciertoSound.volume = 0.0 
+
+
 
      
   function acierto(lasTarjetas){
+   
     lasTarjetas.forEach(function(elemento){
       elemento.classList.add("Acertada");    //clona el nodo del sonido
       
-      aciertoSound.cloneNode().play();
+      
+      switch(elemento.dataset.value){
+        case clark:
+          clarkAudio.play();
+          break;
+          case ralf:
+            ralfAudio.play();
+            break;
+            case ka:
+            kAudio.play();
+            break;
+            case joe:
+            joeAudio.play();
+            break;
+            case king:
+            kingAudio.play();
+            break;
+            case maxima:
+            maximaAudio.play();
+            break;
+            case ryo:
+            ryoAudio.play();
+            break;
+            case terry:
+            terryAudio.play();
+            break;
+         default:
+          aciertoSound.cloneNode().play();
+          
+      }
+
+      // if(elemento.dataset.value === 'media/clark.jpg'){
+      //   ralfAudio.play()
+      //     }
     });
       }    
 

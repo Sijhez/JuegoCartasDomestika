@@ -10,14 +10,21 @@ var ralf = 'media/ralf.jpg'
 var ryo = 'media/ryo.jpg'
 var terry = 'media/terry.jpg'
 
+var ralfAudio = new Audio('media/ralf.mp3')
+var clarkAudio = new Audio('media/clark.mp3')
+var kAudio = new Audio('media/k.mp3')
+var maximaAudio = new Audio('media/maxima.mp3')
+var terryAudio = new Audio('media/terry.mp3')
+var joeAudio = new Audio('media/joe.mp3')
+var kingAudio = new Audio('media/king.mp3')
+var ryoAudio = new Audio('media/ryo.mp3')
+
+var bling = new Audio('media/bling.wav')
 var music = new Audio('media/music1.mp3')
 var aciertoSound = new Audio('media/acierto.mp3')
 var cartaSound =  new Audio('media/carta.mp3')
 var errorSound =  new Audio('media/error.mp3')
-music.volume = 0.1
-errorSound.volume = 0.1
-cartaSound.volume = 0.2 
-aciertoSound.volume = 0.1 
+var ticToc = new Audio('media/ticToc.wav')
 
 var grupoTarjetas1 = [[joe, clark],[ka, king], [maxima, ralf], [ryo, terry]]
 
@@ -45,4 +52,3 @@ var niveles = [//aqui estamos creando el array con objetos niveles,en cada objet
     }
 ];
 
- 

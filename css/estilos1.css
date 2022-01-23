@@ -28,6 +28,11 @@ body {
 }
 h2{
   margin:0px auto;
+  font-family: 'Staatliches', cursive;
+  font-size:2.3em;
+}
+h2.cabeceraTitulo{
+  font-size:2em;
 }
 .escene{
   height: 100%;
@@ -221,6 +226,8 @@ header{
 .cabeceraNum{
   color: darkorange;
   font-size: 2em;
+  font-family: 'Staatliches', cursive;
+  margin-left: 10px;
 }
 
 .cabeceraNum > span{
@@ -237,7 +244,7 @@ h4.cabeceraTitulo{
 
 .end-game,
 .sube-nivel,
-.game-over{
+.game-over,.letsPlay{
   align-items: center;
 justify-content: center;
 height:100vh;
@@ -249,13 +256,83 @@ visibility:hidden;
 z-index:10;
 }
 
-.modal{
-color: #f18f27;
-padding: 30px;
-border-radius: 15px;
-border:2px solid #f18f27;
-background: linear-gradient(5deg, rgb(73 18 46) 32%, rgb(27 5 41) 100%);
+@keyframes playAnim {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+  }
 }
+
+
+@keyframes modalAnim {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+            opacity: 0;
+  }
+  25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+  }
+  
+  100% {
+    -webkit-transform: translateY(100);
+            transform: translateY(100);
+            opacity:0 ;
+  }
+}
+@keyframes modalAnimBye {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100);
+            transform: translateY(100);
+            opacity: 0;
+  }
+}
+.letsPlay{
+  animation: modalAnim 1.5s linear both;
+  visibility: visible;
+}
+.letsPlayBye{
+  animation: modalAnimBye .5s linear both;
+  visibility: hidden;
+}
+
+.invisible{
+  visibility: hidden;
+}
+.modal{
+  color: #f18f27;
+  padding: 20px;
+  border-radius: 15px;
+  border:2px solid #f18f27;
+  background: linear-gradient(5deg, rgb(73 18 46) 32%, rgb(27 5 41) 100%);
+}
+.modal>p{
+  font-size: 1.3em;
+}
+
+  .modalVisible{
+    visibility: visible;
+    animation: playAnim  1s linear both;
+  }
+
 
 .botonFeed{
   background-color: darkorange;
@@ -272,15 +349,13 @@ background: linear-gradient(5deg, rgb(73 18 46) 32%, rgb(27 5 41) 100%);
   width: 100vw;
   background: #000;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   visibility: visible;
 }
-.sonido{
-  display: none;
-}
+
 
 /* menu niveles */
 .openMenu{
@@ -337,4 +412,14 @@ button.nivel{
 }
 .tarjeta__contenido>img{
   border-radius: 0.3em;
+}
+
+@media (max-width:500px){
+  header{
+    position: fixed;
+    z-index: 1;
+  }
+  main{
+    padding-top: 160px;
+  }
 }

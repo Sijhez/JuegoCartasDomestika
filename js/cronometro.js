@@ -37,10 +37,11 @@ function cronometroReversa(){
   var minutos = 0;
   var segundosTexto;
   var minutosTexto;
-  var cronometrobb;
+ // var cronometrobb;
 
 
   function actualizaContador(){
+    ticToc.play()
   segundos--;
     if(segundos < 0){
         segundos = 59;
@@ -64,7 +65,7 @@ function cronometroReversa(){
 
     document.querySelector('#minutos').innerText = minutosTexto;
     document.querySelector('#segundos').innerText = segundosTexto;
-
+    
   }
    
 
